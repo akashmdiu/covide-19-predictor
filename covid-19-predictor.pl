@@ -4,14 +4,14 @@
 :- dynamic high_risk_area/1.
 
 /*for the first part of the the argument, it keeps the statistics of the persons diagno sed
-for the second argument, it keeps the persons at risk */
+for the second argument, it keeps the person s at risk */
 stat(0,0).
 high_risk_area(kingston).
 
 
 %main function
 menu:-
-    new(M,dialog('Covi d 19 Predictor Menu')),send(M,append,new(label)),
+    new(M,dialog('Covid-19 Effect Prediction Menu')),send(M,append,new(label)),
     send(M,append,button(add_effected_location, message(@prolog,addfact))),
     send(M,append,button(test_covid_19, message(@prolog, mainmenu))),
     send(M,append,button(statistics, message(@prolog,displaystats))),
